@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<block>
+  <name>重庆邮电大学_李志濠</name>
+  <key>Lizhihao</key>
+  <category>freqHop</category>
+  <import>import freqHop</import>
+  <make>freqHop.freq_hopping($start_freq,$center_freq_one,$center_freq_two,$center_freq_three,$freq_delta,$period,$end_freq)</make>
+ <callback>set_start_freq($start_freq)</callback>
+  <callback>set_center_freq_one($center_freq_one)</callback>
+  <callback>set_center_freq_two($center_freq_two)</callback>
+  <callback>set_center_freq_two($center_freq_three)</callback>
+  <callback>set_freq_delta($start_freq)</callback>
+  <callback>set_period($period)</callback>
+  <callback>set_end_freq($end_freq)</callback>
+	<param>
+		<name>Start freq</name>
+		<key>start_freq</key>
+		<value>0</value>
+		<type>real</type>
+	</param>
+	<param>
+		<name>center_freq_one</name>
+		<key>center_freq_one</key>
+		<value>0</value>
+		<type>real</type>
+	</param>
+	<param>
+		<name>center_freq_two</name>
+		<key>center_freq_two</key>
+		<value>0</value>
+		<type>real</type>
+	</param>
+	<param>
+		<name>center_freq_three</name>
+		<key>center_freq_three</key>
+		<value>0</value>
+		<type>real</type>
+	</param>
+	<param>
+		<name>freq delta</name>
+		<key>freq_delta</key>
+		<value>2e5</value>
+		<type>real</type>
+	</param>
+	<param>
+		<name>period(ms)</name>
+		<key>period</key>
+		<value>1000</value>
+		<type>real</type>
+	</param>
+	<param>
+		<name>end freq</name>
+		<key>end_freq</key>
+		<value>5e6</value>
+		<type>real</type>
+	</param>
+	
+	<sink>
+		<name>set_msg</name>
+		<type>message</type>
+	<optional>1</optional>
+	</sink>
+	<source>
+		<name>strobe</name>
+		<type>message</type>
+	<optional>1</optional>
+	</source>
+</block>
